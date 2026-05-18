@@ -2,13 +2,5 @@ using UnityEngine;
 
 public class PlanarShift : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-    
-    void Update()
-    {
-        
-    }
+    //TODO: Add vfx and animations
 }
