@@ -849,22 +849,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 10
+  shiftOffset: 1
   ShiftPoint: {fileID: 168797224}
-  interactAction:
-    m_Name: Interact
+  planarShiftAction:
+    m_Name: Planar Shift
     m_Type: 1
     m_ExpectedControlType: Button
-    m_Id: e83bd173-8bd6-4683-8454-38b4cd8ec464
+    m_Id: f19524fa-0258-420b-8243-291e56d4350c
     m_Processors: 
     m_Interactions: Press
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 1797e693-1fd0-4933-b86d-b04bae6856b2
+      m_Id: f182cf43-0698-4e40-b046-580851d286d1
       m_Path: <Keyboard>/f
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Interact
+      m_Action: Planar Shift
       m_Flags: 0
     m_Flags: 0
 --- !u!114 &1069652929

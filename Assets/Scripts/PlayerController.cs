@@ -7,13 +7,13 @@ public class PlayerController : MonoBehaviour
     public float shiftOffset = 1;
     public GameObject ShiftPoint;
 
-    [SerializeField] private InputAction interactAction;
+    [SerializeField] private InputAction planarShiftAction;
     private Rigidbody rb;
     private float moveX, moveY;
     private bool isShiftPlaced;
     
-    private void OnEnable() => interactAction.Enable();
-    private void OnDisable() => interactAction.Disable();
+    private void OnEnable() => planarShiftAction.Enable();
+    private void OnDisable() => planarShiftAction.Disable();
     
     void Start()
     {
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (interactAction.triggered)
+        if (planarShiftAction.triggered)
         {
             if (!ShiftPoint) return;
             if (!isShiftPlaced)
