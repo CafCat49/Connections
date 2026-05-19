@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         isShiftPlaced = false;
+        shiftPoint.SetActive(false);
         pauseWarningMsg.SetActive(false);
         checkpoint = Vector3.zero;
         spawnpoint = transform.position; //TODO: update when starting a new level
@@ -63,11 +64,13 @@ public class PlayerController : MonoBehaviour
         {
             checkpoint = transform.position;
             Vector3 shiftPos = new Vector3(checkpoint.x, checkpoint.y + shiftOffset, checkpoint.z);
+            shiftPoint.SetActive(true);
             shiftPoint.transform.position = shiftPos;
             isShiftPlaced = true;
         }
         else
         {
+            shiftPoint.SetActive(false);
             transform.position = checkpoint;
             isShiftPlaced = false;
         }
@@ -79,6 +82,7 @@ public class PlayerController : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
         transform.position = spawnpoint;
         isShiftPlaced = false;
+        shiftPoint.SetActive(false);
     }
 
     public void Pause(bool forcePause = false, bool forceStart = false)
