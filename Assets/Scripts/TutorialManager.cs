@@ -9,8 +9,9 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         ShowTutorial("Controls:\n" +
-                     "WASD to move\n" +
-                     "F to use Planar Shift");
+                      "WASD to move\n" +
+                      "F to use Planar Shift\n" +
+                      "R to Respawn");
     }
     
     public void ShowTutorial(string message)

@@ -261,10 +261,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2018239132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20, y: -182.05486}
-  m_SizeDelta: {x: 350, y: 175}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 20, y: 17.945145}
+  m_SizeDelta: {x: -50, y: -25}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &200187260
 MonoBehaviour:
@@ -857,10 +857,10 @@ RectTransform:
   - {fileID: 881992067}
   m_Father: {fileID: 2018239132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: 175, y: 40}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -30, y: -30}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &740529329
 MonoBehaviour:
@@ -906,16 +906,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: cbc68ace984f89d4bbeb3afa6983a6f2, type: 3}
-        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
-        m_MethodName: 
+      - m_Target: {fileID: 336832527}
+        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+        m_MethodName: HideTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: HideTutorial
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &740529330
@@ -1062,9 +1062,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hide Tutorial
-
-'
+  m_text: X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1375,8 +1373,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 10
-  shiftOffset: 1
-  ShiftPoint: {fileID: 168797224}
+  shiftOffset: 0.5
+  shiftPoint: {fileID: 168797224}
   planarShiftAction:
     m_Name: Planar Shift
     m_Type: 1
@@ -1392,6 +1390,55 @@ MonoBehaviour:
       m_Processors: 
       m_Groups: 
       m_Action: Planar Shift
+      m_Flags: 0
+    - m_Name: 
+      m_Id: c96abc2e-f954-4ca1-875a-e9db7f57048e
+      m_Path: <HID::LiteStar Pc Flight Simulator>/trigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Planar Shift
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 119db5eb-8785-4fb4-a406-b5f7de4b9524
+      m_Path: <Gamepad>/rightTrigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Planar Shift
+      m_Flags: 0
+    m_Flags: 0
+  respawnAction:
+    m_Name: Respawn
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: f4f4433a-dbde-439e-8b81-904895236cb6
+    m_Processors: 
+    m_Interactions: Press
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 3461890f-0bda-4d25-bc89-2373fd9c69fc
+      m_Path: <Keyboard>/r
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Respawn
+      m_Flags: 0
+    - m_Name: 
+      m_Id: b042a045-751c-4bff-a792-d083f187cee3
+      m_Path: <HID::LiteStar Pc Flight Simulator>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Respawn
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 3a3e3f9d-0e0f-4059-b203-69cceb5bc1f7
+      m_Path: <Gamepad>/buttonEast
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Respawn
       m_Flags: 0
     m_Flags: 0
 --- !u!114 &1069652929
