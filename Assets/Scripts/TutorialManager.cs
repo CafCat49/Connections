@@ -14,7 +14,7 @@ public class TutorialManager : MonoBehaviour
                       "F to use Planar Shift\n" +
                       "R to Respawn\n" +
                       "SPACE to Pause\n" +
-                      "\n(Close tutorial to begin)");
+                      "\n(Close this tutorial to begin)");
     }
     
     public void ShowTutorial(string message)
