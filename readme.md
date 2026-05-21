@@ -10,20 +10,21 @@ A silly Unity game for GameDev.TV Game Jam 2026
 - [X] Basic puzzle mechanic
 
 ## Minimum Viable Product ##
+- [ ] Trigger volumes that resets the level if you fall into them
+- [ ] Multiple types of triggers (i.e buttons and levers)
+- [ ] Jump boost pads
+- [ ] Basic level with puzzles
 - [ ] Win/Loss conditions
-- [ ] Multiple levels
 - [ ] Character assets
 - [ ] UI assets
-- [ ] Main menu
 - [ ] Cutscenes with images and subtitles
 
 ## Gameplay Polish ##
-- [ ] Trigger volumes that lets you proceed to the next level
-- [ ] Trigger volumes that resets the level if you fall into them
-- [ ] Multiple types of triggers (i.e buttons and levers)
 - [ ] Multiple types of puzzles
-- [ ] Jump boost pads
 - [ ] Speed boost pads
+- [ ] Main menu
+- [ ] Multiple levels
+- [ ] Trigger volumes that lets you proceed to the next level
 
 ## Art Polish ##
 - [ ] VFX assets
