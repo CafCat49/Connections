@@ -107,8 +107,8 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
 # Assets
-*.fbx
-*.prefab
-*.mat
-*.meta
-*.png
+Assets/**/*.fbx
+Assets/**/*.prefab
+Assets/**/*.mat
+Assets/**/*.meta
+Assets/**/*.png
