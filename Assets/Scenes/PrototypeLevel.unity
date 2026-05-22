@@ -1010,6 +1010,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589912158}
   m_CullTransparentMesh: 1
+--- !u!1 &634668480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 634668481}
+  - component: {fileID: 634668482}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &634668481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634668480}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.16741, y: -0, z: 65.48786}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &634668482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634668480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3cf866a661ccc45b4a6d928eaad602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  player: {fileID: 1069652928}
+  bridgePuzzle: {fileID: 2097863213}
 --- !u!1 &666316993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,8 +2255,8 @@ Transform:
   m_GameObject: {fileID: 1077085324}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 30}
-  m_LocalScale: {x: 10, y: 5, z: 1}
+  m_LocalPosition: {x: 0, y: 4.95, z: 30}
+  m_LocalScale: {x: 11, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1690174307}
@@ -2453,8 +2499,8 @@ Transform:
   m_GameObject: {fileID: 1409465083}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 2, z: 10.482}
-  m_LocalScale: {x: 3, y: 5, z: 2}
+  m_LocalPosition: {x: -3, y: 4.84, z: 10.482}
+  m_LocalScale: {x: 3, y: 10, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1690174307}
@@ -2774,6 +2820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e383e49a033f4044bb3c8ff2791e451d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  level: {fileID: 634668482}
   player: {fileID: 1069652928}
 --- !u!1 &1546212744 stripped
 GameObject:
@@ -3115,8 +3162,8 @@ Transform:
   m_GameObject: {fileID: 1823235919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 2, z: 10.482}
-  m_LocalScale: {x: 3, y: 5, z: 2}
+  m_LocalPosition: {x: 3, y: 4.84, z: 10.482}
+  m_LocalScale: {x: 3, y: 10, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1690174307}
@@ -3781,7 +3828,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetEulerAngles: {x: 0, y: 0, z: 0}
-  rotationDuration: 5
+  rotationDurationUp: 5
+  rotationDurationDown: 15
+  rotationWaitTime: 3
   bridgePivot: {fileID: 1046496635}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -3790,10 +3839,11 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 330585546}
+  - {fileID: 2075494647}
   - {fileID: 914829186}
   - {fileID: 1069652927}
   - {fileID: 168797228}
   - {fileID: 336832526}
-  - {fileID: 2075494647}
   - {fileID: 666316994}
   - {fileID: 1690174307}
+  - {fileID: 634668481}
