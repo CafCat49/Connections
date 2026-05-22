@@ -20,34 +20,28 @@ public class BridgeTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (isRotating)
-        {
-            elapsedTime += Time.deltaTime;
-            float percentage = Mathf.Clamp01(elapsedTime / rotationDuration);
-            bridgePivot.transform.rotation = Quaternion.Lerp(startRotation, targetRotation, percentage);
-            if (percentage >= 1f) isRotating = false;
-        }
+        if (!isRotating) return;
+        elapsedTime += Time.deltaTime;
+        float percentage = Mathf.Clamp01(elapsedTime / rotationDuration);
+        bridgePivot.transform.rotation = Quaternion.Lerp(startRotation, targetRotation, percentage);
+        if (percentage >= 1f) isRotating = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            targetRotation = Quaternion.Euler(targetEulerAngles);
-            startRotation = bridgePivot.transform.rotation;
-            elapsedTime = 0f;
-            isRotating = true;
-        }
+        if (!other.CompareTag("Player") && !other.CompareTag("Weighted")) return;
+        targetRotation = Quaternion.Euler(targetEulerAngles);
+        startRotation = bridgePivot.transform.rotation;
+        elapsedTime = 0f;
+        isRotating = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            targetRotation = Quaternion.Euler(baseEulerAngles);
-            startRotation = bridgePivot.transform.rotation;
-            elapsedTime = 0f;
-            isRotating = true;
-        }
+        if (!other.CompareTag("Player") && !other.CompareTag("Weighted")) return;
+        targetRotation = Quaternion.Euler(baseEulerAngles);
+        startRotation = bridgePivot.transform.rotation;
+        elapsedTime = 0f;
+        isRotating = true;
     }
 }
