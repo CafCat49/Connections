@@ -1909,7 +1909,7 @@ GameObject:
   - component: {fileID: 1069652928}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Weighted
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2661,6 +2661,7 @@ GameObject:
   - component: {fileID: 1462578371}
   - component: {fileID: 1462578370}
   - component: {fileID: 1462578369}
+  - component: {fileID: 1462578372}
   m_Layer: 0
   m_Name: Lava
   m_TagString: Untagged
@@ -2698,11 +2699,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1462578370
 MeshRenderer:
@@ -2761,6 +2762,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462578367}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1462578372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462578367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e383e49a033f4044bb3c8ff2791e451d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  player: {fileID: 1069652928}
 --- !u!1 &1546212744 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 42c09467ce714cb43b14d359ffc58a3d, type: 3}
@@ -3766,6 +3780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a82853727afabb4c8e3f174da4fda7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  targetEulerAngles: {x: 0, y: 0, z: 0}
+  rotationDuration: 5
   bridgePivot: {fileID: 1046496635}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
