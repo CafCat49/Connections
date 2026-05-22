@@ -10,7 +10,7 @@ A silly Unity game for GameDev.TV Game Jam 2026
 - [X] Basic puzzle mechanic
 
 ## Minimum Viable Product ##
-- [ ] Trigger volumes that resets the level if you fall into them
+- [X] Trigger volumes that resets the level if you fall into them
 - [ ] Multiple types of triggers (i.e buttons and levers)
 - [ ] Jump boost pads
 - [ ] Basic level with puzzles
