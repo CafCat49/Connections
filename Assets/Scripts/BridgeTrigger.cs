@@ -13,7 +13,7 @@ public class BridgeTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (isTriggered)  return;
-        if (other.CompareTag("Weighted"))
+        if (other.CompareTag("Player"))
         {
             bridgePivot.transform.Rotate(Vector3.right, 90);
             isTriggered = true;
