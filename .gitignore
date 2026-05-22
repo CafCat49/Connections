@@ -108,7 +108,3 @@ InitTestScene*.unity*
 
 # Assets
 Assets/**/*.fbx
-Assets/**/*.prefab
-Assets/**/*.mat
-Assets/**/*.meta
-Assets/**/*.png
