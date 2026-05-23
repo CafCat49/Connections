@@ -1,8 +1,16 @@
-# Wizard Orb Portal Bowling Simulator 3D #
+# Randalf The Orb Man #
+
+From the journal of the renowned wizard of the realm Randalf:
+
+"Day 9 of Sun Stand
+
+Woe is me. Today, I have attempted to make contact with my friend in the matters most important. Alas, I failed to reach out to him with my orb. As I pondered the reason for his silence, I saw the raven on my window carrying the letter. 
+
+Dear journal, as it turns out, the buffoon broke his orb. I must send him the replacement posthaste lest the fool resorts to asking his succubus Gemini!
+
+I shall now launch the orb and pray that my focus doth not waver.
 
 ![An old Wizard](images/wimsrd.png)
-
-A silly Unity game for GameDev.TV Game Jam 2026
 
 ## Prototype ##
 - [X] Basic level with a player and controls
