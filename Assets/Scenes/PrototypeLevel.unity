@@ -2114,23 +2114,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 3461890f-0bda-4d25-bc89-2373fd9c69fc
-      m_Path: <Keyboard>/r
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Respawn
-      m_Flags: 0
-    - m_Name: 
-      m_Id: b042a045-751c-4bff-a792-d083f187cee3
-      m_Path: <HID::LiteStar Pc Flight Simulator>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Respawn
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 3a3e3f9d-0e0f-4059-b203-69cceb5bc1f7
-      m_Path: <Gamepad>/buttonEast
+      m_Path: <Keyboard>/f9
       m_Interactions: 
       m_Processors: 
       m_Groups: 
