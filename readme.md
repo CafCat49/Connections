@@ -19,7 +19,6 @@ I shall now launch the orb and pray that my focus doth not waver.
 
 ## Minimum Viable Product ##
 - [X] Trigger volumes that resets the level if you fall into them
-- [ ] Multiple types of triggers (i.e buttons and levers)
 - [X] Jump boost pads
 - [ ] Basic level with puzzles
 - [ ] Win/Loss conditions
@@ -29,6 +28,7 @@ I shall now launch the orb and pray that my focus doth not waver.
 
 ## Gameplay Polish ##
 - [ ] Multiple types of puzzles
+- [ ] Multiple types of triggers (i.e buttons and levers)
 - [ ] Speed boost pads
 - [ ] Main menu
 - [ ] Multiple levels
