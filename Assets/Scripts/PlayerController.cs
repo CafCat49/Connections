@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     public float shiftOffset = 1;
     public GameObject shiftPoint;
     public GameObject pauseWarningMsg;
-    public AvatarManager avatarWindow;
 
     [SerializeField] private InputAction planarShiftAction;
     [SerializeField] private InputAction respawnAction;
@@ -19,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 checkpoint, spawnpoint;
     private bool disableManualPause = false;
     private bool isPaused;
+    private float jumpForce = 0f;
+    private bool isJumping = false;
 
     private void OnEnable()
     {
@@ -77,6 +78,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void ToggleJump(bool inIsJumping, float inJumpForce = 0f)
+    {
+        jumpForce = inJumpForce;
+        isJumping = inIsJumping;
+    }
+
     public void Respawn()
     {
         rb.linearVelocity = Vector3.zero;
@@ -123,6 +130,10 @@ public class PlayerController : MonoBehaviour
         if (isPaused) return;
         Vector3 movement = new Vector3(moveX, 0.0f, moveY);
         rb.AddForce(movement * speed);
+        if (isJumping)
+        {
+            rb.AddForce(Vector3.up * jumpForce);
+        }
     }
 
     void OnMove(InputValue moveValue)
