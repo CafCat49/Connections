@@ -119,6 +119,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &137651630
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 914829186}
+    m_Modifications:
+    - target: {fileID: 7256946315904953868, guid: cae398f62d0733a40980529ba2275631, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256946315904953868, guid: cae398f62d0733a40980529ba2275631, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256946315904953868, guid: cae398f62d0733a40980529ba2275631, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256946315904953868, guid: cae398f62d0733a40980529ba2275631, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256946315904953868, guid: cae398f62d0733a40980529ba2275631, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256946315904953868, guid: cae398f62d0733a40980529ba2275631, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256946315904953868, guid: cae398f62d0733a40980529ba2275631, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256946315904953868, guid: cae398f62d0733a40980529ba2275631, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256946315904953868, guid: cae398f62d0733a40980529ba2275631, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256946315904953868, guid: cae398f62d0733a40980529ba2275631, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069899218084983990, guid: cae398f62d0733a40980529ba2275631, type: 3}
+      propertyPath: m_Name
+      value: Terrain_02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cae398f62d0733a40980529ba2275631, type: 3}
+--- !u!4 &137651631 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7256946315904953868, guid: cae398f62d0733a40980529ba2275631, type: 3}
+  m_PrefabInstance: {fileID: 137651630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &168797224
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +940,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 120}
+  m_SizeDelta: {x: 200, y: 120}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &511693543
 MonoBehaviour:
@@ -1054,8 +1116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cf866a661ccc45b4a6d928eaad602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 1069652928}
-  bridgePuzzle: {fileID: 2097863213}
 --- !u!1 &666316993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,6 +1626,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1023196079}
+  - {fileID: 137651631}
   - {fileID: 1462578368}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1581,7 +1642,7 @@ GameObject:
   - component: {fileID: 1017314991}
   - component: {fileID: 1017314990}
   m_Layer: 5
-  m_Name: GothWizAvatar
+  m_Name: WizAvatar2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1607,9 +1668,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e9a42d814cf7ace4aaa0c90771107c57, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 237ed45abc0a2294e9cfd9ef94b98259, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1642,7 +1703,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 136, y: 102}
+  m_SizeDelta: {x: 210, y: 102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1023196078
 PrefabInstance:
@@ -2066,7 +2127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 10
-  shiftOffset: 0.5
+  shiftOffset: -0.25
   shiftPoint: {fileID: 168797224}
   pauseWarningMsg: {fileID: 1778209351}
   playerAvatarIndex: 1
@@ -3466,7 +3527,7 @@ GameObject:
   - component: {fileID: 1999981309}
   - component: {fileID: 1999981308}
   m_Layer: 5
-  m_Name: TwitchWizAvatar
+  m_Name: WizAvatar1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3489,7 +3550,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 136, y: 102}
+  m_SizeDelta: {x: 210, y: 102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1999981308
 MonoBehaviour:
@@ -3511,7 +3572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5a7b6cbadb48ade4d8c5cd64773aa76b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e7dc5bf9730db1438435ca6f6681928, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

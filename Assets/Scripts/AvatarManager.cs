@@ -1,15 +1,38 @@
+using System;
 using UnityEngine;
 
 public class AvatarManager : MonoBehaviour
 {
+    public float animationSpeed = 1.0f;
     public GameObject[] avatars;
+    
+    private float elapsedTime = 0.0f;
+    private int currentAvatarIndex = 0;
 
-    public void SetActiveAvatar(int index)
+    private void Start()
     {
-        if (index >= avatars.Length) return;
-        for (int i = 0; i < avatars.Length; i++)
+        SwapAvatar();
+        elapsedTime = 0.0f;
+    }
+
+    private void Update()
+    {
+        elapsedTime += Time.deltaTime;
+        if (elapsedTime >= animationSpeed)
         {
-            avatars[i].SetActive(i == index);
+            currentAvatarIndex += 1;
+            if (currentAvatarIndex >= avatars.Length) currentAvatarIndex = 0;
+            SwapAvatar();
+            elapsedTime = 0.0f;
         }
+    }
+
+    private void SwapAvatar()
+    {
+        foreach (GameObject avatar in avatars)
+        {
+            avatar.SetActive(false);
+        }
+        avatars[currentAvatarIndex].SetActive(true);
     }
 }

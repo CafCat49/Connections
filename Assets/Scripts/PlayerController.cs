@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     public float shiftOffset = 1;
     public GameObject shiftPoint;
     public GameObject pauseWarningMsg;
-    public int playerAvatarIndex = 0;
     public AvatarManager avatarWindow;
 
     [SerializeField] private InputAction planarShiftAction;
@@ -43,7 +42,6 @@ public class PlayerController : MonoBehaviour
         pauseWarningMsg.SetActive(false);
         checkpoint = Vector3.zero;
         spawnpoint = transform.position; //TODO: update when starting a new level
-        avatarWindow.SetActiveAvatar(playerAvatarIndex);
     }
 
     void Update()
