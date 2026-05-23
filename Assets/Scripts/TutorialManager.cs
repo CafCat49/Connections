@@ -6,6 +6,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject tutorialWindow;
     public TextMeshProUGUI tutorialText;
     public PlayerController pc;
+    public LevelManager currentLevel;
     
     void Start()
     {
@@ -27,5 +28,6 @@ public class TutorialManager : MonoBehaviour
     {
         pc.Pause(false, true);
         tutorialWindow.SetActive(false);
+        if (!currentLevel.GetIsLevelStarted()) currentLevel.StartLevel();
     }
 }

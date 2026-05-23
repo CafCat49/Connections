@@ -15,12 +15,15 @@ public class BridgeTrigger : MonoBehaviour
     private float elapsedWaitTime = 0f;
     private bool isRotating = false;
     private bool isLowering = false;
+    private bool isLowered = false;
     private float rotationWaitTime = 0f;
+    private AudioSource triggerSound;
 
     private void Start()
     {
         startRotation = bridgePivot.transform.rotation;
         baseEulerAngles = bridgePivot.transform.eulerAngles;
+        triggerSound = GetComponent<AudioSource>();
     }
 
     public void ResetBridge()
@@ -42,11 +45,17 @@ public class BridgeTrigger : MonoBehaviour
         if (rotationWaitTime > 0f) //if you are supposed to have a wait time, check how much time has passed
         {
             elapsedWaitTime += Time.deltaTime;
-            if (elapsedWaitTime < rotationWaitTime) return;
+            if (elapsedWaitTime < rotationWaitTime) return; //return if not enough time passed
         }
         elapsedRotationTime += Time.deltaTime;
+        
+        //set rotation speed depending on direction, and rotate
         float percentage = !isLowering ? Mathf.Clamp01(elapsedRotationTime / rotationDurationUp) : Mathf.Clamp01(elapsedRotationTime / rotationDurationDown);
         bridgePivot.transform.rotation = Quaternion.Lerp(startRotation, targetRotation, percentage);
+        if (triggerSound && !triggerSound.isPlaying)
+        {
+            triggerSound.Play();
+        }
         if (percentage >= 1f)
         {
             isRotating = false; 
