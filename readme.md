@@ -1,6 +1,6 @@
 # Wizard Orb Portal Bowling Simulator 3D #
 
-![Goth girl wizard](images/goth_wizard_avatar.png)
+![An old Wizard](images/wimsrd.png)
 
 A silly Unity game for GameDev.TV Game Jam 2026
 
