@@ -4232,8 +4232,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   targetEulerAngles: {x: 0, y: 0, z: 0}
   rotationDurationUp: 5
-  rotationDurationDown: 15
-  rotationWaitTime: 3
+  rotationDurationDown: 1
+  waitTime: 1
   bridgePivot: {fileID: 1046496635}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
