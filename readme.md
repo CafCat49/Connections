@@ -8,7 +8,7 @@ Woe is me. Today, I have attempted to make contact with my friend in the matters
 
 Dear journal, as it turns out, the buffoon broke his orb. I must send him the replacement posthaste lest the fool resorts to asking his succubus Gemini!
 
-I shall now launch the orb and pray that my focus doth not waver.
+I shall now launch the orb and pray that my focus doth not waver."
 
 ![An old Wizard](images/wimsrd.png)
 
