@@ -1,10 +1,13 @@
-using System;
 using UnityEngine;
+using TMPro;
 
 public class AvatarManager : MonoBehaviour
 {
     public float animationSpeed = 1.0f;
     public GameObject[] avatars;
+    public GameObject captionPanel;
+    public TextMeshProUGUI captionText;
+    
     
     private float elapsedTime = 0.0f;
     private int currentAvatarIndex = 0;
@@ -12,6 +15,7 @@ public class AvatarManager : MonoBehaviour
     private void Start()
     {
         SwapAvatar();
+        captionPanel.SetActive(false);
         elapsedTime = 0.0f;
     }
 
@@ -34,5 +38,19 @@ public class AvatarManager : MonoBehaviour
             avatar.SetActive(false);
         }
         avatars[currentAvatarIndex].SetActive(true);
+    }
+
+    public void ToggleCaptions(bool displayCC, string caption = "")
+    {
+        if (!captionPanel) return;
+        if (displayCC)
+        {
+            captionPanel.SetActive(true);
+            captionText.text = caption;
+        }
+        else
+        {
+            captionPanel.SetActive(false);
+        }
     }
 }
