@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private bool isPaused;
     private float jumpForce = 0f;
     private bool isJumping = false;
+    private Camera cam;
 
     private void OnEnable()
     {
@@ -42,7 +43,8 @@ public class PlayerController : MonoBehaviour
         shiftPoint.SetActive(false);
         pauseWarningMsg.SetActive(false);
         checkpoint = Vector3.zero;
-        spawnpoint = transform.position; //TODO: update when starting a new level
+        spawnpoint = transform.position;
+        cam = Camera.main;
     }
 
     void Update()
@@ -100,6 +102,7 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0;
             disableManualPause = true;
             isPaused = true;
+            Cursor.lockState = CursorLockMode.None;
             return;
         }
         
@@ -108,6 +111,7 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 1;
             disableManualPause = false;
             isPaused = false;
+            Cursor.lockState = CursorLockMode.Locked;
             return;
         }
         
@@ -116,20 +120,31 @@ public class PlayerController : MonoBehaviour
             pauseWarningMsg.SetActive(true);
             Time.timeScale = 0;
             isPaused = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {
             pauseWarningMsg.SetActive(false);
             Time.timeScale = 1;
             isPaused = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
     void FixedUpdate()
     {
         if (isPaused) return;
-        Vector3 movement = new Vector3(moveX, 0.0f, moveY);
+        
+        Vector3 camForward = cam.transform.forward;
+        Vector3 camRight = cam.transform.right;
+        camForward.y = 0f;
+        camRight.y = 0f;
+        camForward.Normalize();
+        camRight.Normalize();
+        
+        Vector3 movement = (camForward * moveY + camRight * moveX);
         rb.AddForce(movement * speed);
+        
         if (isJumping)
         {
             rb.AddForce(Vector3.up * jumpForce);
@@ -141,6 +156,11 @@ public class PlayerController : MonoBehaviour
         Vector2 moveVec = moveValue.Get<Vector2>();
         moveX = moveVec.x;
         moveY = moveVec.y;
+    }
+
+    public bool GetPaused()
+    {
+        return isPaused;
     }
     
     
