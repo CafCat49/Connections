@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class BridgeTrigger : MonoBehaviour
 {
-    public Vector3 targetEulerAngles;
+    public float targetXAngle = 45.0f;
     public float rotationDurationUp = 5.0f;
     public float rotationDurationDown = 15.0f;
     public float waitTime = 3.0f;
     public GameObject bridgePivot;
 
-    private Vector3 baseEulerAngles;
-    private Quaternion startRotation;
-    private Quaternion targetRotation;
+    private Quaternion baseLocalRotation;
+    private Quaternion startLocalRotation;
+    private Quaternion targetLocalRotation;
+    
     private float elapsedRotationTime = 0f;
     private float elapsedWaitTime = 0f;
     private bool isRotating = false;
@@ -21,8 +22,7 @@ public class BridgeTrigger : MonoBehaviour
 
     private void Start()
     {
-        startRotation = bridgePivot.transform.rotation;
-        baseEulerAngles = bridgePivot.transform.eulerAngles;
+        baseLocalRotation = bridgePivot.transform.localRotation;
         triggerSound = GetComponent<AudioSource>();
     }
 
@@ -32,7 +32,7 @@ public class BridgeTrigger : MonoBehaviour
         elapsedWaitTime = 0f;
         isRotating = false;
         isLowering = false;
-        bridgePivot.transform.eulerAngles = baseEulerAngles;
+        bridgePivot.transform.localRotation = baseLocalRotation;
     }
 
     private void Update()
@@ -50,8 +50,12 @@ public class BridgeTrigger : MonoBehaviour
         elapsedRotationTime += Time.deltaTime;
         
         //set rotation speed depending on direction, and rotate
-        float percentage = !isLowering ? Mathf.Clamp01(elapsedRotationTime / rotationDurationUp) : Mathf.Clamp01(elapsedRotationTime / rotationDurationDown);
-        bridgePivot.transform.rotation = Quaternion.Lerp(startRotation, targetRotation, percentage);
+        float duration = isLowering ? rotationDurationDown : rotationDurationUp;
+        float percentage = Mathf.Clamp01(elapsedRotationTime / duration);
+        
+        bridgePivot.transform.localRotation = Quaternion.Lerp(startLocalRotation, targetLocalRotation, percentage);
+        
+        
         if (triggerSound && !triggerSound.isPlaying)
         {
             triggerSound.Play();
@@ -59,15 +63,15 @@ public class BridgeTrigger : MonoBehaviour
         if (percentage >= 1f)
         {
             isRotating = false; 
-            isLowering = false;
+            //isLowering = false;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player") && !other.CompareTag("Weighted")) return;
-        targetRotation = Quaternion.Euler(targetEulerAngles);
-        startRotation = bridgePivot.transform.rotation;
+        targetLocalRotation = baseLocalRotation * Quaternion.AngleAxis(targetXAngle, Vector3.right);
+        startLocalRotation = bridgePivot.transform.localRotation;
         elapsedRotationTime = 0f;
         elapsedWaitTime = 0f;
         isRotating = true;
@@ -77,8 +81,8 @@ public class BridgeTrigger : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("Player") && !other.CompareTag("Weighted")) return;
-        targetRotation = Quaternion.Euler(baseEulerAngles);
-        startRotation = bridgePivot.transform.rotation;
+        targetLocalRotation = baseLocalRotation;
+        startLocalRotation = bridgePivot.transform.localRotation;
         elapsedRotationTime = 0f;
         elapsedWaitTime = 0f;
         isRotating = true;
