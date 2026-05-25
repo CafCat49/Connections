@@ -578,7 +578,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa743c1f0389284a8c4fb600749df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 1069652923}
+  sensitivity: 0.5
+  player: {fileID: 1069652928}
+  lookX:
+    m_Name: Look X
+    m_Type: 0
+    m_ExpectedControlType: Axis
+    m_Id: 2a0d25ed-67dd-40c0-bd19-9bc24842d768
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: 5d3418f6-8dd4-415e-9cfd-b78765c1ad00
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look X
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: b9066751-12a8-42fc-a51a-717ab318cbd5
+      m_Path: <Mouse>/delta/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look X
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: ebac5f98-33d0-4e0e-8fa8-fda43ee49b04
+      m_Path: <Mouse>/delta/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look X
+      m_Flags: 8
+    m_Flags: 0
+  lookY:
+    m_Name: Look Y
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0a7bf856-968b-4130-81a1-b0d399e60fac
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: 67fcd9ef-6ffc-4044-96a6-6263eb574d37
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look Y
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 79f86709-a608-4623-93a3-f0bfba6f96f7
+      m_Path: <Mouse>/delta/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look Y
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 62c87858-4e9c-4cec-b4f4-78fb221e524d
+      m_Path: <Mouse>/delta/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look Y
+      m_Flags: 8
+    m_Flags: 0
 --- !u!1 &336832522
 GameObject:
   m_ObjectHideFlags: 0
