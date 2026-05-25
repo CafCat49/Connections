@@ -698,13 +698,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -104, y: 3.19, z: -1.94}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: -104, y: 2.764, z: -2.671}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,7 +761,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa743c1f0389284a8c4fb600749df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 1069652923}
+  sensitivity: 1
+  player: {fileID: 1069652928}
+  lookX:
+    m_Name: Look X
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 72615f39-cc85-4e6e-8699-583f3849e318
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: e43b2357-6781-441b-93f6-76a347b68ab0
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look X
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 6ebf5acd-72a8-4720-9342-66aca38ba4a7
+      m_Path: <Mouse>/delta/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look X
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 84545fee-7572-43ca-ae6b-53a998eea6e3
+      m_Path: <Mouse>/delta/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look X
+      m_Flags: 8
+    m_Flags: 0
+  lookY:
+    m_Name: Look Y
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1dd9271a-4fa6-4581-8524-630760930b84
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: d4111765-6df6-4fcd-b0b5-ca5121ccfff9
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look Y
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 23644ba9-4763-4258-84ba-d3f998cf6009
+      m_Path: <Mouse>/delta/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look Y
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: e9a49b62-7552-4357-8ab2-e6871001fc35
+      m_Path: <Mouse>/delta/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look Y
+      m_Flags: 8
+    m_Flags: 0
 --- !u!1 &332031957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,7 +3875,7 @@ Transform:
   m_GameObject: {fileID: 1069652923}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -104, y: 2.352, z: 0}
+  m_LocalPosition: {x: -104, y: 0.894, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:

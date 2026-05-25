@@ -38,14 +38,14 @@ public class CamControl : MonoBehaviour
         transform.position = player.transform.position + offset;
         if (!isDistanceSet)
         {
-            distance = Vector2.Distance(transform.position, player.transform.position);
+            distance = offset.magnitude;
             isDistanceSet = true;
         }
 
         if (player.GetPaused()) return;
         yaw += lookX.ReadValue<float>() * sensitivity;
         pitch -= lookY.ReadValue<float>() * sensitivity;
-        pitch = Mathf.Clamp(pitch, -90.0f, 90.0f);
+        pitch = Mathf.Clamp(pitch, 15.0f, 90.0f);
         
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
         Vector3 negativeDistance = new Vector3(0.0f, 0.0f, -distance);
