@@ -16,7 +16,6 @@ public class AvatarManager : MonoBehaviour
     {
         SwapAvatar();
         captionPanel.SetActive(false);
-        elapsedTime = 0.0f;
     }
 
     private void Update()
