@@ -5,11 +5,13 @@ public class CutscenePlayer : MonoBehaviour
 {
     public float animationDelay = 5.0f;
     public GameObject[] frames;
+    public GameObject splashScreen;
     public string mainlevelname = "PrototypeLevel";
     
     private float elapsedTime = 0.0f;
     private int currentFrame = 0;
     private int lastFrame = 1;
+    private bool isStarted = false;
 
 
 private void Start()
@@ -17,11 +19,21 @@ private void Start()
     if (frames.Length == 0) return;
     SwapFrame();
     lastFrame = frames.Length - 1;
+    Time.timeScale = 0f;
+    splashScreen.SetActive(true);
+    isStarted = false;
+}
+
+public void BeginCutscene()
+{
+    splashScreen.SetActive(false);
+    Time.timeScale = 1f;
+    isStarted = true;
 }
 
 private void Update()
 {
-    if (frames.Length == 0) return;
+    if (frames.Length == 0 || !isStarted) return;
     if (currentFrame >= lastFrame) return;
     
     elapsedTime += Time.deltaTime;
