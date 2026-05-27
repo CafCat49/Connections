@@ -14,7 +14,7 @@ public class TutorialManager : MonoBehaviour
                       "WASD to move\n" +
                       "F to use Planar Shift\n" +
                       "SPACE to Pause\n" +
-                      "\nTip: for more chaos, the game is compatible with PC Flight Stick controls");
+                      "\nTip: if stuck, press F9 to reset");
     }
     
     public void ShowTutorial(string message)
