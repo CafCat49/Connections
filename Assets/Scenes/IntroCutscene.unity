@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e206623f5218c9810990a79fb7b916c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  animationDelay: 7
+  animationDelay: 10
   frames:
   - {fileID: 591044795}
   - {fileID: 1351009353}
@@ -1623,6 +1623,7 @@ MonoBehaviour:
   - {fileID: 238957239}
   - {fileID: 1518676307}
   splashScreen: {fileID: 1388626333}
+  buttonText: {fileID: 1509250944}
   mainlevelname: PrototypeLevel
 --- !u!1 &1744394323
 GameObject:
